@@ -1,0 +1,707 @@
+Console.WriteLine("Enter Your Name:");
+        string name = Console.ReadLine();
+
+        Console.WriteLine("How many hours did you sleep");
+        int hours=Convert.ToInt32(Console.ReadLine());
+
+        if (hours < 6)
+        {
+             Console.WriteLine("Hello " + name +" You must be feeling tired");
+        }
+        else
+        {
+            Console.WriteLine("Hello " + name + " You had a enough sleep");
+        }
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+        Console.WriteLine("Enter the number: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        if (num %2==0) {
+            Console.WriteLine(num + " is even number");
+
+        }
+        else
+        {
+            Console.WriteLine(num + " is odd number");
+        }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Console.WriteLine("Enter the num ");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        if(num == 10)
+        {
+            Console.WriteLine("value of num is 10 ");
+        }
+        else if(num == 20)
+        {
+            Console.WriteLine("value of num is 20 ");
+        }
+        else if (num == 30)
+        {
+            Console.WriteLine("value of num is 30 ");
+        }
+        else
+        {
+            Console.WriteLine("value does not match");
+        }
+        Console.WriteLine("The exact value of num is " + num);
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        int a = 1;
+        int b = 2;
+
+        if(!(a==1 && b == 3)) // !(true * false =false)= true
+        {
+            Console.WriteLine(true);
+        }
+
+        if(a==3 || b == 2)
+        {
+            Console.WriteLine(true);
+        }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+namespace ConsoleApp1                                                                            Employee employee = new Employee("virat","kohli");
+       												 employee.GetFirstName();
+       												 employee.GetLastName(); 
+{
+    internal class Employee
+    {
+        public string firstName;
+        public string lastName;
+        public Employee(string fname, string lname)
+        {
+           firstName=fname;
+           lastName=lname;
+
+        }
+        public void GetFirstName()
+        {
+            Console.WriteLine(firstName);
+        }
+        public void GetLastName()
+        {
+            Console.WriteLine(lastName);
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+for(int x=1; x<=20;x++)
+        {
+            if (x % 2 == 0)
+            {
+                Console.WriteLine(x + " is even number");
+            }
+            else
+            {
+                Console.WriteLine(x + " is odd number");
+            }
+            
+        }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+int x = 21;
+        do
+        {
+            Console.WriteLine(x + " is a number");
+            x++;
+        } while (x < 20);
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        for(int i = 1; i <= 6; i++)
+        {
+            if (i == 2)
+                continue;
+
+            Console.WriteLine(i);
+        }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    static int Addition(int a)
+    {
+        int add = a + a;
+
+        return add;
+    }
+    static void Main(string[] args)
+    {
+        int number = 2;
+
+        int result= Addition(number);
+        Console.WriteLine(result);
+
+    }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+			Reverse a string
+
+    static void Main(string[] args)
+    {
+        string name = "Rohit";
+        char[] chars = name.ToCharArray();
+        char[] result = new char[chars.Length];
+
+        for(int i=0,j=name.Length-1;i<name.Length;i++,j--)
+        {
+            result[i]= chars[j];
+        }
+        Console.WriteLine(result); 
+    }
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter first name: ");
+        string name = Console.ReadLine();
+
+        string[] a = name.Split(' ');
+
+        for(int i=a.Length-1;i>=0; i--)
+        {
+            Console.Write(a[i]+""+' ');
+        }
+
+    }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        int[] arr = { 1, 2, 3, 4, 5 };
+        int[] arr1 = new int[arr.Length];
+        int j = 0;
+        for(int i = 0; i < arr.Length; i++)
+        {
+            arr1[j] = (arr[i] * 2) ;
+            j++;
+        }
+        for (int i = 0; i < arr.Length; i++)
+        {
+            Console.Write(arr1[i].ToString().ToCharArray().Select(Convert.ToInt32).ToArray());
+        }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+          string s1 = "may god bless you";
+          string r = string.Empty;
+          for (int i = s1.Length - 1; i >= 0; i--)
+          {
+              r += s1[i];
+          }
+          Console.Write($"Reverse String is : {r} " +" \n");
+          Console.WriteLine("Enter a first name");
+          string fname = Console.ReadLine();
+          Console.WriteLine("Enter last  name");
+          string lname = Console.ReadLine();
+          Console.WriteLine(lname + " " +fname + "\n");
+          string str = "madam";
+          isPalindrome(str);
+          isPalindrome("racecar");
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ public static void square(int[] array)
+    {
+        Console.WriteLine("square of array :");
+        foreach (int num in array)
+        {
+            int squaree = num * num;
+            Console.WriteLine(squaree);
+        }
+    }
+    public static void reverse(int[] array)
+    {
+        Console.WriteLine("reverse array is:");
+        for (int i = array.Length - 1; i >= 0; i--)
+        {
+            Console.WriteLine(array[i]);
+        }
+    }
+    public static void Main(String[] args)
+    {
+        int[] array = { 1, 2, 3, 4, 5, 6, };
+        square(array);
+        reverse(array);
+    }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+static void Incr(int i)
+    {
+        i = i + 1;
+    }
+    public static void Main(String[] args)
+    {
+        int a = 2;
+        Incr(a);
+        Console.WriteLine(a);
+    }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    static void Incr(ref int i)
+    {
+        i = i + 1;
+    }
+    public static void Main(String[] args)
+    {
+        int a = 2;
+        Incr(ref a);
+        Console.WriteLine(a);
+    }
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+       // Animal animal = new Animal();
+        //animal.eat();
+        //animal.sing();
+
+        Animal animal1 = new Dog();
+        animal1.sing();
+        animal1.eat();
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Account
+{
+    private double balance;
+
+    public void setBalance(double balance)
+    {
+        this.balance = balance;
+    }
+    public double getBalance()
+    {
+        Console.WriteLine(balance);
+        return balance;
+    }
+}
+public class Program
+{
+   
+    public static void Main(String[] args)
+    {
+        Account account = new Account();
+        Console.WriteLine("Enter the Amount");
+        double currentBalance = Convert.ToDouble(Console.ReadLine());
+
+        account.setBalance(currentBalance);
+        account.getBalance();
+
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Addition
+{
+    public int add(int a, int b, int c)
+    {
+        return a + b + c;
+    }
+
+    public int add(int a, int b)
+    {
+        return a + b;
+    }
+}
+public class Program
+{
+   
+    public static void Main(String[] args)
+    {
+        Addition addition = new Addition();
+        addition.add(1, 2, 3);
+        addition.add(5, 3);
+
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+internal interface Emp
+    {
+        public void getFirstName();
+        public void getLastName();
+    }
+
+    public class IEmp : Emp 
+    {
+        public void getFirstName()
+        {
+            Console.WriteLine("Zubair");
+        }
+
+        public void getLastName() 
+        {
+            Console.WriteLine("Shaik");
+        }
+    }
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ internal interface ICalculator
+    {
+        public void getAddition();
+        public void getSubtraction();
+        public void getMultiply();
+        public void getDivision();
+    }
+
+    public class Calculator : ICalculator
+    {
+        public void getAddition()
+        {
+            Console.WriteLine(" It is addition");
+        }
+
+        public void getSubtraction() 
+        {
+            Console.WriteLine(" It is subtraction");
+        }
+
+        public void getMultiply()
+        {
+            Console.WriteLine(" It is Multiplication");
+        }
+
+        public void getDivision()
+        {
+            Console.WriteLine(" It is Division");
+        }
+
+    }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+using ConsoleApp1;
+
+public class Program
+{
+    static void Words(string a)
+    {
+        string[] b= a.Split(' ');
+
+        Console.WriteLine(b.Length);
+        
+    }
+
+    static void Letters(string a)
+    {
+
+        Console.WriteLine(a.Length);
+    }
+   
+    public static void Main(String[] args)
+    {
+        Console.WriteLine("Enter the Sentence: ");
+        string sen = Console.ReadLine();
+
+        Words(sen);
+        Letters(sen);
+
+
+
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+using ConsoleApp1;
+
+public class Program
+{
+    static void Table(int a)
+    {
+        for(int i=1; i<=10; i++)
+        {
+            Console.WriteLine(a + " * " + i + " = " + a*i);
+        }
+    }
+    
+   
+    public static void Main(String[] args)
+    {
+        Console.WriteLine("Enter the number: ");
+
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        Table(num);
+
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+using ConsoleApp1;
+
+abstract class AbsClass
+{
+    public int Add(int x,int y)
+    {
+        return x + y;
+    }
+
+    public abstract int Multiply(int x,int y);
+}
+
+class AbsDerived : AbsClass
+{
+   public override int Multiply(int x,int y)
+    {
+        return x * y;
+    }
+    public static void Main(String[] args)
+    {
+        AbsDerived absDerived = new AbsDerived();
+
+        int added = absDerived.Add(10, 20);
+        int multiplied = absDerived.Multiply(10, 20);
+
+        Console.WriteLine("Added : {0}, Multiplied : {1} ", added, multiplied);
+
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+using ConsoleApp1;
+
+
+public class Program
+{
+    private static int CalculateAge(DateTime dateOfBirth)
+    {
+        int age = 0;
+        age = DateTime.Now.Year - dateOfBirth.Year;
+        if(DateTime.Now.DayOfYear < dateOfBirth.DayOfYear)
+        {
+            age = age - 1;
+        }
+        return age;
+    }
+    public static void Main(String[] args)
+    {
+        Console.WriteLine("Enter your date of birth");
+        DateTime dob = Convert.ToDateTime(Console.ReadLine());
+        int age = CalculateAge(dob);
+        Console.WriteLine(age);
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+using ConsoleApp1;
+using System.Collections.Generic;
+
+class Student
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Course { get; set; }
+}
+
+public class Program
+{
+    public static void Main(String[] args)
+    {
+        List<Student> studentList = new List<Student>();
+        Student student1 = new Student();
+        student1.Name = "Rohit";
+        student1.Age = 23;
+        student1.Course = "Cricketer";
+
+        studentList.Add(student1);
+
+        Student student2 = new Student();
+        student2.Name = "Ronaldo";
+        student2.Age = 25;
+        student2.Course = "Football player";
+
+        studentList.Add(student2);
+
+        Student student3 = new Student();
+        student3.Name = "Ayub";
+        student3.Age = 23;
+        student3.Course = "Engineer";
+
+        studentList.Add(student3);
+
+        foreach (Student student in studentList)
+        {
+            Console.WriteLine(student.Name);
+            Console.WriteLine(student.Age);
+            Console.WriteLine(student.Course);
+        }
+        studentList.RemoveAt(1);
+
+        Console.WriteLine("After deleting");
+        foreach (Student student in studentList)
+        {
+            Console.WriteLine(student.Name);
+            Console.WriteLine(student.Age);
+            Console.WriteLine(student.Course);
+        }
+
+        Student studentToUpdate = studentList.Find(s => s.Course == "Cricketer");
+        if(studentToUpdate != null)
+        {
+            studentToUpdate.Age = 27;
+            studentToUpdate.Name = "Virat";
+        }
+
+        foreach (Student student in studentList)
+        {
+            Console.WriteLine("Name : {0}, Age : {1}, Course: {2}",
+                student.Name, student.Age, student.Course);
+        }
+
+
+
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class EmployeeDetails
+    {
+        List<Employee> employees;
+        public EmployeeDetails()
+        {
+            employees = new List<Employee>();
+        }
+        public void AddEmp(Employee employee)
+        {
+            employees.Add(employee);
+        }
+
+        public void RemoveEmp(int num)
+        {
+            employees.RemoveAt(num);
+        }
+
+        public void UpdateEmp(int employeeid)
+        {
+            Employee employeeToUpdate = employees.Find(s => s.Id == employeeid);
+
+            if (employeeToUpdate != null)
+            {
+                employeeToUpdate.FirstName = "Jasprit";
+                employeeToUpdate.LastName = "Bumrah";
+            }
+        }
+        public List<Employee> GetEmployees()
+        {
+            return employees;
+        }
+    }
+}
+                                           --------------------------------------------------------------
+
+using ConsoleApp1;
+using System.Collections.Generic;
+
+class Employee
+{
+    public int Id { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Address { get; set; }
+}
+
+public class Program
+{
+
+    public static void Main(String[] args)
+    {
+       EmployeeDetails details = new EmployeeDetails();
+        Employee employee = new Employee()
+        {
+            Id = 18,
+            FirstName = "Virat",
+            LastName = "Kohli",
+            Address = "Banglore"
+        };
+        details.AddEmp(employee);
+
+        Employee employee1 = new Employee()
+        {
+            Id = 45,
+            FirstName = "Rohit",
+            LastName = "Sharma",
+            Address = "Mumbai"
+        };
+        details.AddEmp(employee1);
+
+        Employee employee2 = new Employee()
+        {
+            Id = 3,
+            FirstName = "Suresh",
+            LastName = "Raina",
+            Address = "Chennai"
+        };
+        details.AddEmp(employee2);
+
+
+        foreach (var e in details.GetEmployees())
+        {
+            Console.WriteLine("Id: {0}, FirstName: {1}, LastName: {2}, Address: {3}",
+                e.Id, e.FirstName, e.LastName, e.Address);
+        }
+
+        Console.WriteLine("Deleting index 2");
+
+        details.RemoveEmp(2);
+
+        foreach (var e in details.GetEmployees())
+        {
+            Console.WriteLine("Id: {0}, FirstName: {1}, LastName: {2}, Address: {3}",
+                e.Id, e.FirstName, e.LastName, e.Address);
+        }
+
+        details.UpdateEmp(18);
+        Console.WriteLine("updating id 18");
+
+        foreach (var e in details.GetEmployees())
+        {
+            Console.WriteLine("Id: {0}, FirstName: {1}, LastName: {2}, Address: {3}",
+                e.Id, e.FirstName, e.LastName, e.Address);
+        }
+
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
